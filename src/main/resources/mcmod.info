@@ -1,13 +1,13 @@
 [
 {
-  "modid": "ExampleMod",
-  "name": "Example Mod",
-  "description": "",
+  "modid": "Carnivora",
+  "name": "Carnivora",
+  "description": "Eat more meat!",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": [""],
+  "authorList": ["allaryin"],
   "credits": "",
   "logoFile": "",
   "screenshots": [],

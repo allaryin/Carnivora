@@ -15,6 +15,7 @@ debug/
 /eclipse/
 /.classpath
 /.project
+/.settings
 
 /.idea/
 *.iml
