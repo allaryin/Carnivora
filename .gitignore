@@ -19,3 +19,4 @@ debug/
 
 /.idea/
 *.iml
+/bin/
