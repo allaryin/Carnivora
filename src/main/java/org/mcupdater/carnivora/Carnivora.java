@@ -21,16 +21,17 @@ public class Carnivora {
 
 	static final Logger		LOGGER	= LogManager.getFormatterLogger(Version.MOD_ID);
 
-	static File				BaseDir;
 	static Configuration	Config;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		BaseDir = new File(event.getModConfigurationDirectory(), Version.MOD_ID);
 		Config = new Configuration(event.getSuggestedConfigurationFile());
-
-		if (!BaseDir.exists())
-			BaseDir.mkdir();
+		
+		for( ConfigSettings settings : ConfigSettings.values() ) {
+			settings.load(Config);
+		}
+		
+		Config.save();
 	}
 
 	@EventHandler
