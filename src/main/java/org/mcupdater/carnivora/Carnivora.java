@@ -32,11 +32,14 @@ public class Carnivora {
 		}
 		
 		Config.save();
+		
+		ItemHandler.init();
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		LOGGER.info("Loaded version %s", Version.VERSION);
+		RecipeHandler.init();
 	}
 
 	@EventHandler
