@@ -7,5 +7,5 @@ public class Version {
 
 	public static final String	CHANNEL		= MOD_ID;
 	
-	public static final String	TEXTURE_PREFIX = "carnivora";
+	public static final String	TEXTURE_PREFIX = "carnivora:";
 }
