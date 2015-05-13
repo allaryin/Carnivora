@@ -7,11 +7,15 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public abstract class RecipeHandler {
 	public static void init() {
-		addSmelteryRecipe(Items.rotten_flesh, Items.leather);
+		if( ConfigSettings.ZOMBIE_LEATHER.enabled )
+			addSmelteryRecipe(Items.rotten_flesh, Items.leather);
 		
-		addSmelteryRecipe(Items.egg, FoodDefinition.EGG_COOKED.item);
-		addSmelteryRecipe(FoodDefinition.MUTTON_RAW.item, FoodDefinition.MUTTON_COOKED.item);
-		addSmelteryRecipe(FoodDefinition.SQUID_RAW.item, FoodDefinition.SQUID_COOKED.item);
+		if( ConfigSettings.BAKED_EGG.enabled )
+			addSmelteryRecipe(Items.egg, FoodDefinition.EGG_COOKED.item);
+		if( ConfigSettings.MUTTON.enabled )
+			addSmelteryRecipe(FoodDefinition.MUTTON_RAW.item, FoodDefinition.MUTTON_COOKED.item);
+		if( ConfigSettings.CALAMARI.enabled )
+			addSmelteryRecipe(FoodDefinition.SQUID_RAW.item, FoodDefinition.SQUID_COOKED.item);
 	}
 	
 	public static void addSmelteryRecipe(Item source, Item dest) {

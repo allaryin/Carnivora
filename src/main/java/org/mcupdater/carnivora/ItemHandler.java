@@ -7,10 +7,11 @@ import net.minecraft.item.ItemFood;
 public abstract class ItemHandler {
 	public static void init() {
 		for( FoodDefinition def : FoodDefinition.values() ) {
+			if( !def.settings.enabled ) continue;
 			final ItemFood item = new ItemFood(def.hunger, def.saturation, def.dogfood);
 			item.setMaxStackSize(def.stackSize);
-			item.setTextureName(def.texture);
-			item.setUnlocalizedName(Version.TEXTURE_PREFIX + "." + def.texture);
+			item.setTextureName(Version.TEXTURE_PREFIX + def.texture);
+			item.setUnlocalizedName(Version.MOD_ID.toLowerCase() + "." + def.texture);
 			item.setCreativeTab(CreativeTabs.tabFood);
 			
 			// save the reference :)
