@@ -5,10 +5,10 @@
   "description": "Eat more meat!",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "http://mods.mcupdater.com/carnivora/",
   "updateUrl": "",
   "authorList": ["allaryin"],
-  "credits": "",
+  "credits": "zenth - art",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
