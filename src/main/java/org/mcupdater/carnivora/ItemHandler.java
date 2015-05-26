@@ -3,6 +3,7 @@ package org.mcupdater.carnivora;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemFood;
+import net.minecraftforge.oredict.OreDictionary;
 
 public abstract class ItemHandler {
 	public static void init() {
@@ -17,6 +18,9 @@ public abstract class ItemHandler {
 			// save the reference :)
 			def.item = item;
 			GameRegistry.registerItem(item, def.texture);
+			for( String oreName : def.oreDict ) {
+				OreDictionary.registerOre(oreName, item);
+			}
 		}
 	}
 }
