@@ -1,9 +1,9 @@
 item.carnivora.muttonRaw.name=Raw Mutton
 item.carnivora.muttonCooked.name=Cooked Mutton
 
-item.carnivora.pigHide.name=Pigskin
-
 item.carnivora.squidRaw.name=Raw Calamari
 item.carnivora.squidCooked.name=Cooked Calamari
 
 item.carnivora.eggCooked.name=Baked Egg
+
+item.carnivora.hidePig.name=Pigskin
