@@ -33,6 +33,10 @@ public class DropListener {
 		this.cookedDrops = cooked;
 	}
 	
+	public void setDrops(List<Item> drops) {
+		this.rawDrops = this.cookedDrops = drops;
+	}
+	
 	@SubscribeEvent
 	public void invoke(LivingDropsEvent event) {
 		// is this even the right kind of event?

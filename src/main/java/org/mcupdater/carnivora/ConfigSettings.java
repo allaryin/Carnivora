@@ -9,7 +9,8 @@ public enum ConfigSettings {
 	MUTTON(true, "Sheep drop mutton."),
 	CALAMARI(true, "Squid drop calamari."),
 	BAKED_EGG(true, "Eggs may be cooked and eaten."),
-	ZOMBIE_LEATHER(true, "Zombie meat may be cooked into leather.");
+	ZOMBIE_LEATHER(true, "Zombie meat may be cooked into leather."),
+	PIG_LEATHER(true, "Pigs drop pigskin, which may be processed into normal leather.");
 	
 	public final boolean defaultValue;
 	public boolean enabled;

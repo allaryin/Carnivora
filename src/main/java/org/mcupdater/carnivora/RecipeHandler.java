@@ -16,9 +16,18 @@ public abstract class RecipeHandler {
 			addSmelteryRecipe(FoodDefinition.MUTTON_RAW.item, FoodDefinition.MUTTON_COOKED.item);
 		if( ConfigSettings.CALAMARI.enabled )
 			addSmelteryRecipe(FoodDefinition.SQUID_RAW.item, FoodDefinition.SQUID_COOKED.item);
+		
+		if( ConfigSettings.PIG_LEATHER.enabled ) {
+			final ItemStack pigskin = new ItemStack(HideDefinition.PIG.item);
+			addShapelessRecipe(Items.leather, pigskin, pigskin);
+		}
 	}
 	
 	public static void addSmelteryRecipe(Item source, Item dest) {
 		GameRegistry.addSmelting(source, new ItemStack(dest, 1), 0.38f);
+	}
+			
+	public static void addShapelessRecipe(Item dest, Object... recipe) {
+		GameRegistry.addShapelessRecipe(new ItemStack(dest, 1), recipe);
 	}
 }
