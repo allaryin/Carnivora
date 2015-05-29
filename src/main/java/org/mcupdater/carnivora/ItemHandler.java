@@ -39,7 +39,7 @@ public abstract class ItemHandler {
 			item.setMaxStackSize(def.stackSize);
 			item.setTextureName(Version.TEXTURE_PREFIX + def.texture);
 			item.setUnlocalizedName(Version.MOD_ID.toLowerCase() + "." + def.texture);
-			item.setCreativeTab(Items.leather.getCreativeTab());
+			item.setCreativeTab(CreativeTabs.tabMaterials);
 			
 			// save the reference :)
 			def.item = item;
