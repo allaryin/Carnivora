@@ -1,3 +1,6 @@
+item.carnivora.horseRaw.name=Raw Horse
+item.carnivora.horseCooked.name=Cooked Horse
+
 item.carnivora.muttonRaw.name=Raw Mutton
 item.carnivora.muttonCooked.name=Cooked Mutton
 
@@ -7,3 +10,5 @@ item.carnivora.squidCooked.name=Cooked Calamari
 item.carnivora.eggCooked.name=Baked Egg
 
 item.carnivora.hidePig.name=Pigskin
+item.carnivora.hideHorse.name=Horse Hide
+item.carnivora.hideWolf.name=Wolf Hide
