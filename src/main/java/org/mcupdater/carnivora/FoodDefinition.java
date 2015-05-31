@@ -11,6 +11,10 @@ public enum FoodDefinition {
 			new String[]{"foodCalamariraw", "listAllfishraw"}),
 	SQUID_COOKED(	"squidCooked",	64, 5, 1.2F, true, ConfigSettings.CALAMARI,
 			new String[]{"foodCalamaricooked", "listAllfishcooked"}),
+	HORSE_RAW(		"horseRaw",		64, 3, 0.3F, true, ConfigSettings.HORSE_MEAT,
+			new String[]{"foodHorseraw", "listAllmeatraw", "listAllhorseraw"}),
+	HORSE_COOKED(	"horseCooked",	64, 8, 0.8F, true, ConfigSettings.HORSE_MEAT,
+			new String[]{"foodHorsecooked", "listAllmeatcooked", "listAllhorsecooked"}),
 	EGG_COOKED(		"eggCooked",	16, 4, 0.8F, true, ConfigSettings.BAKED_EGG,
 			new String[]{"foodBakedegg"});
 	

@@ -4,7 +4,11 @@ import net.minecraft.item.Item;
 
 public enum HideDefinition {
 	PIG(	"hidePig",	64, ConfigSettings.PIG_LEATHER,
-			new String[]{"hidePig", "listAllhide"});
+			new String[]{"hidePig", "listAllhide"}),
+	HORSE(	"hideHorse",64, ConfigSettings.HORSE_LEATHER,
+			new String[]{"hideHorse", "listAllhide"}),
+	WOLF(	"hideWolf",	64, ConfigSettings.WOLF_LEATHER,
+			new String[]{"hideWolf", "listAllhide"});
 	
 	public final String texture;
 	public final int stackSize;
