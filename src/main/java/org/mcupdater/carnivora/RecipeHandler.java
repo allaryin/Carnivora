@@ -12,14 +12,24 @@ public abstract class RecipeHandler {
 		
 		if( ConfigSettings.BAKED_EGG.enabled )
 			addSmelteryRecipe(Items.egg, FoodDefinition.EGG_COOKED.item);
+		if( ConfigSettings.HORSE_MEAT.enabled )
+			addSmelteryRecipe(FoodDefinition.HORSE_RAW.item, FoodDefinition.HORSE_COOKED.item);
 		if( ConfigSettings.MUTTON.enabled )
 			addSmelteryRecipe(FoodDefinition.MUTTON_RAW.item, FoodDefinition.MUTTON_COOKED.item);
 		if( ConfigSettings.CALAMARI.enabled )
 			addSmelteryRecipe(FoodDefinition.SQUID_RAW.item, FoodDefinition.SQUID_COOKED.item);
 		
+		if( ConfigSettings.HORSE_LEATHER.enabled ) {
+			final ItemStack horsehide = new ItemStack(HideDefinition.HORSE.item);
+			addShapelessRecipe(Items.leather, horsehide, horsehide);
+		}
 		if( ConfigSettings.PIG_LEATHER.enabled ) {
 			final ItemStack pigskin = new ItemStack(HideDefinition.PIG.item);
 			addShapelessRecipe(Items.leather, pigskin, pigskin);
+		}
+		if( ConfigSettings.WOLF_LEATHER.enabled ) {
+			final ItemStack wolfhide = new ItemStack(HideDefinition.WOLF.item);
+			addShapelessRecipe(Items.leather, wolfhide, wolfhide);
 		}
 	}
 	
