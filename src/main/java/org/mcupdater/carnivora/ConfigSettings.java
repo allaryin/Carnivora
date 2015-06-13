@@ -13,7 +13,8 @@ public enum ConfigSettings {
 	PIG_LEATHER(true, "Pigs drop pigskin, which may be processed into normal leather."),
 	HORSE_LEATHER(true, "Horses drop horse hide in addition to vanilla leather."),
 	HORSE_MEAT(false, "Horses drop meat."),
-	WOLF_LEATHER(true, "Wolves drop hides, which may be processed into normal leather.");
+	WOLF_LEATHER(true, "Wolves drop hides, which may be processed into normal leather."),
+	SMOKER(true, "Enable the smoker.");
 	
 	public final boolean defaultValue;
 	public boolean enabled;

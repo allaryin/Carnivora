@@ -32,6 +32,7 @@ public class Carnivora {
 		Config.save();
 		
 		ItemHandler.init();
+		BlockHandler.init();
 	}
 
 	@EventHandler
