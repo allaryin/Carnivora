@@ -12,6 +12,7 @@ import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 import org.mcupdater.carnivora.Version;
 
+import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -21,7 +22,7 @@ public class TileEntitySmokerRenderer extends TileEntitySpecialRenderer {
 	private final ModelSmoker model;
 	
 	public TileEntitySmokerRenderer() {
-		this.model = new ModelSmoker();
+		this.model = ModelSmoker.getInstance();
 	}
 	
 	private void adjustRotatePivotViaMeta(World world, int x, int y, int z) {
@@ -38,13 +39,12 @@ public class TileEntitySmokerRenderer extends TileEntitySpecialRenderer {
 		// not sure if we want this or not
 		GL11.glTranslatef((float)x + 0.5F, (float)y + 1.5F, (float)z + 0.5F);
 		
-		ResourceLocation textures = new ResourceLocation(Version.TEXTURE_PREFIX+"textures/blocks/smoker.png");
-		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(model.getTexture());
 		
 		{
 			GL11.glPushMatrix();
 			GL11.glRotatef(180F,  0F,  0F,  1F);
-			this.model.render(null, 0F, 0F, -0.1F, 0F, 0F, 0.0625F);				
+			model.render(null, 0F, 0F, -0.1F, 0F, 0F, 0.0625F);
 			GL11.glPopMatrix();
 		}
 		

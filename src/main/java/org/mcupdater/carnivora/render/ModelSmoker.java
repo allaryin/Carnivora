@@ -1,10 +1,25 @@
 package org.mcupdater.carnivora.render;
 
+import org.mcupdater.carnivora.Version;
+
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.ResourceLocation;
 
 public class ModelSmoker extends ModelBase {
+	public static ModelSmoker INSTANCE = null;
+	public static ModelSmoker getInstance() {
+		if( INSTANCE == null )
+			INSTANCE = new ModelSmoker();
+		return INSTANCE;
+	}
+	
+	ResourceLocation texture;
+	public ResourceLocation getTexture() {
+		return texture;
+	}
+	
 	ModelRenderer chimney1;
 	ModelRenderer chimney2;
 	ModelRenderer chimney3;
@@ -17,7 +32,9 @@ public class ModelSmoker extends ModelBase {
 	ModelRenderer leg3;
 	ModelRenderer leg4;
 	
-	public ModelSmoker() {
+	private ModelSmoker() {
+		texture = new ResourceLocation(Version.TEXTURE_PREFIX+"textures/blocks/smoker.png");
+		
 		textureWidth = 58;
 		textureHeight = 19;
 		
@@ -97,6 +114,8 @@ public class ModelSmoker extends ModelBase {
 		leg4.setTextureSize(58, 19);
 		leg4.mirror = true;
 		setRotation(leg4, 0F, 0F, 0F);
+		
+		INSTANCE = this;
 	}
 
 	@Override
