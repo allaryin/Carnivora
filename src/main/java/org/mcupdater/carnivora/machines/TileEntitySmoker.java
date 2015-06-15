@@ -4,4 +4,5 @@ import net.minecraft.tileentity.TileEntityFurnace;
 
 public class TileEntitySmoker extends TileEntityFurnace {
 
+
 }

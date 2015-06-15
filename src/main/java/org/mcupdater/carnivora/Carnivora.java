@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -20,6 +21,9 @@ public class Carnivora {
 	static final Logger		LOGGER	= LogManager.getFormatterLogger(Version.MOD_ID);
 
 	static Configuration	Config;
+	
+	@SidedProxy(clientSide="org.mcupdater.carnivora.ClientProxy", serverSide="org.mcupdater.carnivora.CommonProxy")
+	public static CommonProxy proxy;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -40,6 +44,8 @@ public class Carnivora {
 		LOGGER.info("Loaded version %s", Version.VERSION);
 		RecipeHandler.init();
 		DropHandler.init();
+		
+		proxy.init();
 	}
 
 	@EventHandler

@@ -2,15 +2,16 @@ package org.mcupdater.carnivora.machines;
 
 import org.mcupdater.carnivora.Version;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class BlockSmoker extends BlockMachine {
 	
 	public BlockSmoker() {
-		super();
-		setBlockTextureName(Version.TEXTURE_PREFIX + "smoker");
-		//setUnlocalizedName(Version.MOD_ID.toLowerCase() + ".smoker");
+		super("smoker");
 	}
 
 	@Override
