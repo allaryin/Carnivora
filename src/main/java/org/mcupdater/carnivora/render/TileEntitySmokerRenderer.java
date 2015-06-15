@@ -1,4 +1,4 @@
-package org.mcupdater.carnivora.machines;
+package org.mcupdater.carnivora.render;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;

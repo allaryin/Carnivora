@@ -1,7 +1,7 @@
 package org.mcupdater.carnivora;
 
 import org.mcupdater.carnivora.machines.TileEntitySmoker;
-import org.mcupdater.carnivora.machines.TileEntitySmokerRenderer;
+import org.mcupdater.carnivora.render.TileEntitySmokerRenderer;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.relauncher.Side;
