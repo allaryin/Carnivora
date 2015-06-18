@@ -32,7 +32,7 @@ public class ModelSmoker extends ModelBase {
 	ModelRenderer leg3;
 	ModelRenderer leg4;
 	
-	private ModelSmoker() {
+	public ModelSmoker() {
 		texture = new ResourceLocation(Version.TEXTURE_PREFIX+"textures/blocks/smoker.png");
 		
 		textureWidth = 58;
@@ -114,8 +114,6 @@ public class ModelSmoker extends ModelBase {
 		leg4.setTextureSize(58, 19);
 		leg4.mirror = true;
 		setRotation(leg4, 0F, 0F, 0F);
-		
-		INSTANCE = this;
 	}
 
 	@Override

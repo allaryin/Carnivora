@@ -22,7 +22,7 @@ public class TileEntitySmokerRenderer extends TileEntitySpecialRenderer {
 	private final ModelSmoker model;
 	
 	public TileEntitySmokerRenderer() {
-		this.model = ModelSmoker.getInstance();
+		this.model = new ModelSmoker();//ModelSmoker.getInstance();
 	}
 	
 	private void adjustRotatePivotViaMeta(World world, int x, int y, int z) {
