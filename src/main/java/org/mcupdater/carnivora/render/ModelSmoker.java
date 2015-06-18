@@ -35,14 +35,14 @@ public class ModelSmoker extends ModelBase {
     ModelRenderer bodytop;
     ModelRenderer bodyfrontleft;
     ModelRenderer bodybottom;
-    ModelRenderer bodyback;
+    ModelRenderer bodyback2;
     ModelRenderer bodyright;
   
 	public ModelSmoker() {
 		texture = new ResourceLocation(Version.TEXTURE_PREFIX+"textures/blocks/smoker.png");
 		
-		textureWidth = 58;
-		textureHeight = 19;
+	    textureWidth = 69;
+	    textureHeight = 38;
     
       handle = new ModelRenderer(this, 62, 30);
       handle.addBox(-1F, -2F, -1F, 1, 4, 1);
@@ -134,12 +134,12 @@ public class ModelSmoker extends ModelBase {
       bodybottom.setTextureSize(69, 38);
       bodybottom.mirror = true;
       setRotation(bodybottom, 1.570796F, 0F, 0F);
-      bodyback = new ModelRenderer(this, 1, 21);
-      bodyback.addBox(-8F, 4F, -4F, 16, 1, 7);
-      bodyback.setRotationPoint(0F, 14F, 0F);
-      bodyback.setTextureSize(69, 38);
-      bodyback.mirror = true;
-      setRotation(bodyback, 1.570796F, 0F, 0F);
+      bodyback2 = new ModelRenderer(this, 1, 21);
+      bodyback2.addBox(-8F, 4F, -4F, 16, 1, 7);
+      bodyback2.setRotationPoint(0F, 14F, 0F);
+      bodyback2.setTextureSize(69, 38);
+      bodyback2.mirror = true;
+      setRotation(bodyback2, 1.570796F, 0F, 0F);
       bodyright = new ModelRenderer(this, 0, 30);
       bodyright.addBox(-4F, -7.5F, -4F, 8, 1, 7);
       bodyright.setRotationPoint(0F, 14F, 0F);
@@ -167,7 +167,7 @@ public class ModelSmoker extends ModelBase {
     bodytop.render(f5);
     bodyfrontleft.render(f5);
     bodybottom.render(f5);
-    bodyback.render(f5);
+    bodyback2.render(f5);
     bodyright.render(f5);
   }
   
