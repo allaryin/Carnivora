@@ -12,6 +12,8 @@ public abstract class RecipeHandler {
 		
 		if( ConfigSettings.BAKED_EGG.enabled )
 			addSmelteryRecipe(Items.egg, FoodDefinition.EGG_COOKED.item);
+		if( ConfigSettings.BAKED_CARROT.enabled )
+			addSmelteryRecipe(Items.carrot, FoodDefinition.CARROT_COOKED.item);
 		if( ConfigSettings.HORSE_MEAT.enabled )
 			addSmelteryRecipe(FoodDefinition.HORSE_RAW.item, FoodDefinition.HORSE_COOKED.item);
 		if( ConfigSettings.MUTTON.enabled )

@@ -16,7 +16,11 @@ public enum FoodDefinition {
 	HORSE_COOKED(	"horseCooked",	64, 8, 0.8F, true, ConfigSettings.HORSE_MEAT,
 			new String[]{"foodHorsecooked", "listAllmeatcooked", "listAllhorsecooked"}),
 	EGG_COOKED(		"eggCooked",	16, 4, 0.8F, true, ConfigSettings.BAKED_EGG,
-			new String[]{"foodBakedegg"});
+			new String[]{"foodBakedegg"}),
+	// raw potato is 1,0.6 - baked potato is 5,1.2; raw carrot is 3,1.2
+	CARROT_COOKED(	"carrotCooked",	64,	5, 0.8F, false, ConfigSettings.BAKED_CARROT,
+			new String[]{"foodBakedcarrot"});
+	
 	
 	public final String texture;
 	public final int stackSize;
